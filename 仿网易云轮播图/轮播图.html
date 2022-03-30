@@ -1,1 +1,53 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>仿网易云轮播图</title>
+    <link rel="stylesheet" href="轮播图.css" />
+  </head>
+
+  <body>
+    <!-- 轮播图 -->
+
+    <div class="banner" id="banner">
+      <!-- 图片列表 -->
+      <ul>
+        <li class="cur">
+          <img src="01.jpg" alt="" />
+        </li>
+        <li class="next">
+          <img src="02.jpg" alt="" />
+        </li>
+        <li><img src="03.jpg" alt="" /></li>
+        <li><img src="04.jpg" alt="" /></li>
+        <li><img src="05.jpg" alt="" /></li>
+        <li><img src="06.jpg" alt="" /></li>
+        <li><img src="07.jpg" alt="" /></li>
+        <li><img src="08.jpg" alt="" /></li>
+        <li class="prev">
+          <img src="09.jpg" alt="" />
+        </li>
+      </ul>
+      <!-- 小圆点 -->
+      <ol>
+        <li class="cur" data-n="0"></li>
+        <li data-n="1"></li>
+        <li data-n="2"></li>
+        <li data-n="3"></li>
+        <li data-n="4"></li>
+        <li data-n="5"></li>
+        <li data-n="6"></li>
+        <li data-n="7"></li>
+        <li data-n="8"></li>
+      </ol>
+      <!-- 左右按钮 -->
+      <span class="btn leftbtn" id="leftbtn">&lt</span>
+      <span class="btn rightbtn" id="rightbtn">&gt</span>
+    </div>
+  </body>
+
+  <script src="轮播图.js"></script>
+</html>
