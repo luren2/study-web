@@ -1,4 +1,4 @@
-# html+css+js 仿照PC端网易云音乐做的一个轮播图
+# HTML+CSS+JS 仿照PC端网易云音乐做的一个轮播图
 ## 效果图：
 ![效果图](https://user-images.githubusercontent.com/50769362/160762745-2bce2434-bf62-496f-a929-ab3a88abc855.png)
 
