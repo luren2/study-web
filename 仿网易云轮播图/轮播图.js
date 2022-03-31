@@ -11,7 +11,7 @@ let imgArr = [];
 //设置小圆点的数组
 let dotArr = [];
 let temp = []; //为后面点击小圆点切换图片做备份
-for (var i = 0; i < imglist.length; i++) {
+for (let i = 0; i < imglist.length; i++) {
   imgArr.push(imglist[i].className);
   dotArr.push(ollist[i].className);
   temp.push(imglist[i].className);
@@ -46,7 +46,7 @@ function nextImg() {
 
   dotArr.unshift(dotArr[dotArr.length - 1]);
   dotArr.pop();
-  for (var i = 0; i < imglist.length; i++) {
+  for (let i = 0; i < imglist.length; i++) {
     imglist[i].className = imgArr[i];
     ollist[i].className = dotArr[i];
   }
@@ -65,7 +65,7 @@ leftbtn.onclick = function () {
   imgArr.shift(); //删除第一项shift()
   dotArr.push(dotArr[0]);
   dotArr.shift();
-  for (var i = 0; i < imglist.length; i++) {
+  for (let i = 0; i < imglist.length; i++) {
     imglist[i].className = imgArr[i];
     ollist[i].className = dotArr[i];
   }
