@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>随机颜色生成器</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .update {
+      background-color: pink;
+      width: 150px;
+      height: 50px;
+      font-size: 20px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 50%;
+      margin-bottom: 5px;
+      transform: translateX(-50%);
+    }
+    .update:hover {
+      transform: translateX(-50%) scale(1.2);
+    }
+    div {
+      width: 100%;
+      /* padding: 0 50px; */
+    }
+    div > button {
+      width: 10%;
+      height: 100px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    div > button:hover {
+      transform: scale(1.1);
+    }
+  </style>
+
+  <body>
+    <button class="update">更新颜色</button>
+    <div></div>
+    <script>
+      function getRandomColors() {
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        return `rgb(${r},${g},${b})`;
+      }
+      let div = document.getElementsByTagName("div")[0];
+      let btns = [];
+      let id;
+      function getColors(cnt) {
+        let count = 0;
+        btns = [];
+        id = setInterval(function () {
+          let btn = document.createElement("button");
+          btn.className = "btn";
+          let color = getRandomColors();
+          btn.style.backgroundColor = color;
+          btn.innerText = color;
+          div.appendChild(btn);
+          btns.push(btn);
+          count++;
+          if (count >= cnt) {
+            clearInterval(id);
+            return;
+          }
+        }, 100);
+      }
+
+      getColors(50);
+      let update = document.getElementsByClassName("update")[0];
+      update.addEventListener("click", function () {
+        clearInterval(id);
+        for (let i = 0; i < btns.length; i++) {
+          div.removeChild(btns[i]);
+        }
+        getColors(50);
+      });
+    </script>
+  </body>
+</html>
