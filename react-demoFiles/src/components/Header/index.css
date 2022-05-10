@@ -1,0 +1,27 @@
+.header {
+  position: relative;
+  z-index: 1000;
+  height: 70px;
+  box-sizing: border-box;
+  background: #242424;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+.header a {
+  height: 70px;
+  line-height: 70px;
+  padding: 0 30px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.header a:hover {
+  background: #000;
+}
+a.header-active {
+  background: #000;
+}

@@ -1,0 +1,30 @@
+.about {
+  z-index: 90;
+  height: 45px;
+  box-sizing: border-box;
+  background-color: #c20c0c;
+  border-bottom: 1px solid #a40011;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about a {
+  color: white;
+  margin: 5px 10px;
+  height: 30px;
+  font-size: 15px;
+  line-height: 30px;
+  padding: 0px 20px;
+  border-radius: 30px;
+  text-align: center;
+}
+.about a:hover {
+  background: rgba(155, 9, 9);
+}
+a.about-active {
+  background: rgba(155, 9, 9);
+}
+.main-about h2 {
+  margin-top: 50px;
+  text-align: center;
+}
