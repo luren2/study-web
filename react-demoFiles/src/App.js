@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import GetAllRoutes from './routers';
 
@@ -7,7 +7,9 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-      <GetAllRoutes />
+      <Suspense fallback={<div>loading</div>}>
+        <GetAllRoutes />
+      </Suspense>
     </BrowserRouter>
   );
 }
