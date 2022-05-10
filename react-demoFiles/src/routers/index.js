@@ -1,12 +1,18 @@
 import React from 'react';
 import { Navigate, useRoutes } from 'react-router-dom';
 
-import Login from '@/pages/Login';
-import Main from '@/pages/Main';
-import Home from '@/pages/Home';
-import About from '@/pages/About';
-import Profile from '@/pages/Profile';
-import NotFound from '@/pages/NotFound';
+// import Login from '@/pages/Login';
+// import Main from '@/pages/Main';
+// import Home from '@/pages/Home';
+// import About from '@/pages/About';
+// import Profile from '@/pages/Profile';
+// import NotFound from '@/pages/NotFound';
+const Login = React.lazy(() => import('@/pages/Login'));
+const Main = React.lazy(() => import('@/pages/Main'));
+const Home = React.lazy(() => import('@/pages/Home'));
+const About = React.lazy(() => import('@/pages/About'));
+const Profile = React.lazy(() => import('@/pages/Profile'));
+const NotFound = React.lazy(() => import('@/pages/NotFound'));
 
 const GetAllRoutes = () => {
   const routes = useRoutes([
